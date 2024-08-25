@@ -1,5 +1,11 @@
-![image](https://github.com/user-attachments/assets/22b58c37-9b59-47f9-b167-e7e518957406)Applied Data Science Project Documentation
 ---
+## Background and Business Goal
+
+Since its inception in 1969 in Paris, Sephora has expanded globally and revolutionized beauty retailing with a focus on luxury and expertise. It offers a wide selection of skincare products and solutions, ranging from makeup, skincare, hair care and beauty tools.  
+
+Its dedication to empowering customers through personalized service and expert advice is central to Sephora's success. Ongoing competition and market saturation challenges mean Sephora must constantly distinguish itself from other competitors through its unique brand identity and offering. Through innovations with digital tools and enhanced personalized recommendations based on customer preferences, it remains dedicated to its mission to elevate the beauty retail experience and lead in the industry. 
+This project aims to gather valuable insights into customer satisfaction and sentiment by analysing helpful reviews and features. These include identifying best-selling items, product effectiveness through reviews and ratings, and a recommendation system for cross-selling to increase sales and customer satisfaction.   
+
 ## Project Background
 
 The primary business objectives are to determine whether customer feedback is positive or negative, and to use these insights to enhance decision-making processes. This involves identifying common issues mentioned in reviews, which can inform potential areas for product improvement. Additionally, the project aims to monitor changes in sentiment over time and correlate them with product developments or changes in marketing strategies. The data mining goal is to classify customer feedback into sentiment categories, which will provide actionable insights for improving customer experience and satisfaction.
@@ -168,4 +174,5 @@ If Sephora is adopting ML for business decisions, the company needs to be accoun
 Sentiment analysis models need to be transparent to allow stakeholders understand how decisions are made. Sephora needs to let stakeholders understand the objectives behind the analysis and how it will inform business or customer decisions.
 
 ## Source Codes and Datasets
-Upload your model files and dataset into a GitHub repo and add the link here. 
+https://github.com/nicolewps/ITD214_Applied-Data-Science-Project
+### Dataset: https://drive.google.com/drive/folders/18rFmz3ILGTLsMftKmjpSaBToO4Txn98r?usp=sharing
