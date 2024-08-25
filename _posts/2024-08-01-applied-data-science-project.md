@@ -1,12 +1,10 @@
-Applied Data Science Project Documentation
+![image](https://github.com/user-attachments/assets/22b58c37-9b59-47f9-b167-e7e518957406)Applied Data Science Project Documentation
 ---
 ## Project Background
-Provide an overview of your team's project business goals and objectives and state the objective that you are working on. 
 
 The primary business objectives are to determine whether customer feedback is positive or negative, and to use these insights to enhance decision-making processes. This involves identifying common issues mentioned in reviews, which can inform potential areas for product improvement. Additionally, the project aims to monitor changes in sentiment over time and correlate them with product developments or changes in marketing strategies. The data mining goal is to classify customer feedback into sentiment categories, which will provide actionable insights for improving customer experience and satisfaction.
 
 ## Work Accomplished
-Document your work done to accomplish the outcome
 
 ### Text Preprocessing
 
@@ -49,6 +47,24 @@ There will be two arguments being passed to the Wordnet Lemmatizer:
 #### Final Word Cloud after Text Preprocessing
 ![image](https://github.com/user-attachments/assets/d256632a-0193-468c-b1a8-7b2c0241cc3c)
 
+##### Key Themes
+The largest words like "skin", "feel", "love", "moistur", "great", "good", "work", "hydr", and "face“ suggest that these are the most frequently discussed topics in customer reviews. 
+>> Recommendation: Sephora can focus on these themes to understand what customers are specifically saying about them. For example, the word moisture seems to be drawing a lot of attention from the customers.
+
+##### Customer Experiences
+Words like "love", "great", "good", "amazing", "perfect", "wonderful", "best", "smooth", "soft", "nice", "glow", and "recommend" suggest positive experiences.
+>> Recommendation: Sephora can consider analysing these positive reviews to identify products that customers love the most and highlight these in marketing campaigns to attract more customers. 
+For example, focus more on glowing products.
+
+##### Areas for Improvement
+Words like "dry", "oily", "sensitive", and "breakout" might indicate issues customers face with the products.
+>> Recommendation: Investigate these negative mentions to identify common problems. If "dry" is frequently mentioned, customers might be experiencing dryness from certain products. Consider formulating more how to mitigate these issues such as providing hydrating versions.
+
+##### User Experience
+Words related to application and use, such as "apply", "use", "smooth", and "easy", can provide insights into the user experience.
+>> Recommendation: Improve product formulations based on feedback related to application and user experience. 
+For example, if "apply" is often mentioned with ease or difficulty, it can indicate how user-friendly the product is.
+
 ## Word Representation
 
 Word Representation covers essential techniques for converting text data into numerical vectors for sentiment analysis. It highlights four main methods under Vector Generation, Word Embedding and Feature Extraction. 
@@ -68,20 +84,55 @@ Word Embedding involves training a Word2Vec model on tokenized documents to crea
 ## Modelling
 In the modeling selection process for sentiment analysis, three different models were evaluated: Decision Tree, Support Vector Machine (SVM), and Naive Bayes. 
 
+### Decision Tree
 ![image](https://github.com/user-attachments/assets/231de95f-693e-4404-b010-600cdde2a4d4)
+#### Accuracy: 0.94275 
+#### Weighted Avg F1-Score: 0.94
+Lowest accuracy compared to Support Vector Machine and Naives Bayes. Better at capturing ‘negative’ class compared to Naives Bayes.
 
+### Support Vector Machine
 ![image](https://github.com/user-attachments/assets/b0da1717-9af6-4d97-ad7a-bcf03a6807c0)
+#### Accuracy: 0.95885
+#### Weighted Avg F1-Score: 0.95 
+Highest accuracy compared to Decision Tree and Support Vector Machine, strong performance on ‘neutral’ and ‘positive’ classes. 
+Higher accuracy compared to Decision Tree. However, it has weak performance on ‘negative’ class. 
 
+### Naives Bayes
 ![image](https://github.com/user-attachments/assets/aa00fa13-69c0-4db4-ad2f-fc6eaffcf809)
+#### Accuracy: 0.95545 
+#### Weighted Avg F1-Score: 0.94
+
+Chosen Model: The Support Vector Machine (SVM) was selected due to its highest achieved accuracy of 0.95885, demonstrating its superior overall performance, particularly on the majority classes. This high accuracy suggests that the SVM model is well-suited for the task, offering strong predictive capabilities across the dataset.
+
+### Hyperparameter Tuning
+
+Hyperparameter tuning for the SVM model was conducted using GridSearchCV from scikit-learn, with the goal of optimizing the model's performance. The best parameters identified were {'kernel': 'linear'}, resulting in an improved accuracy of 0.9678. The classification report for the optimized SVM model shows strong performance across different classes, with a weighted average precision, recall, and F1-score all at 0.97. Notably, the model achieved a perfect precision and near-perfect recall for the neutral class, indicating highly reliable performance in that category.
+
+![image](https://github.com/user-attachments/assets/7aa26870-c846-48c6-8eb1-576545b9b95a)
+
+### Modelling on Unseen Data
+
+![image](https://github.com/user-attachments/assets/70acf466-d340-404e-b172-2e5965159838)
+>> Predicted Sentiment: Positive
+
+![image](https://github.com/user-attachments/assets/eaf92cbd-5bc7-4065-badd-5529d56e53ab)
+>> Predicted Sentiment: Negative
+
+![image](https://github.com/user-attachments/assets/7fc8c6d0-01ad-4272-a061-2c370bc29390)
+>> Predicted Sentiment: Negative
+
+The model is applied to unseen data to effectively evaluate its performance. It demonstrates strong predictive capabilities, accurately identifying the sentiment of reviews. For instance, a review mentioning a 'horrible smell,' which clearly indicates a negative sentiment, is correctly classified as negative by the model.
 
 ## Evaluation
 
-Negative Sentiment
+### Negative Sentiment
 Terms like "smell," "dry," and "expensive" suggest common concerns or complaints related to the use of skincare and beauty products.
+
 ![image](https://github.com/user-attachments/assets/5baa0dc8-7652-404e-a364-84016e7db7f5)
 
-Positive Sentiment
+### Positive Sentiment
 Words like "great," "good," "nice," and "gentle" suggest satisfaction with product performance, quality, and overall experience. 
+
 ![image](https://github.com/user-attachments/assets/d7141cb0-ac96-4b3c-acb3-c301359330e4)
 
 ## Recommendation and Analysis
@@ -103,9 +154,7 @@ Recommendation: Sephora can consider emphasize in marketing campaigns as they re
 Frequent use of "recommend”. 
 Recommendations: This suggests that satisfied customers are sharing their experiences with others, contributing to a positive brand reputation. Sephora can rewards points to customers that recommends products to their friends.
 
-
 ## AI Ethics
-Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
 
 ### Privacy
 The project involves analysing user reviews of Sephora products which may contain personal information, therefore data used needs to be anonymised and users are consented before data is being used for analysis. Implementing encryption and access control measures to protect data.
