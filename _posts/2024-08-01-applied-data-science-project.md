@@ -174,6 +174,6 @@ If Sephora is adopting ML for business decisions, the company needs to be accoun
 Sentiment analysis models need to be transparent to allow stakeholders understand how decisions are made. Sephora needs to let stakeholders understand the objectives behind the analysis and how it will inform business or customer decisions.
 
 ## Source Codes and Datasets
-[https://github.com/nicolewps/ITD214_Applied-Data-Science-Project]
+[Source Code](https://github.com/nicolewps/ITD214_Applied-Data-Science-Project)
 ### Dataset: 
-[https://drive.google.com/drive/folders/18rFmz3ILGTLsMftKmjpSaBToO4Txn98r?usp=sharing]
+[Dataset](https://drive.google.com/drive/folders/18rFmz3ILGTLsMftKmjpSaBToO4Txn98r?usp=sharing)
